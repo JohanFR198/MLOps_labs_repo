@@ -5,16 +5,16 @@ import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 
 
-from class_2_tdd import is_prime
+from class_2_tdd import isprime
 
 
 
 def validate_isprime():
-    assert is_prime(2)
-    assert is_prime(3)
-    assert not is_prime(4)
-    assert is_prime(5)
-    assert not is_prime(12)
-    assert not is_prime(25)
-    assert is_prime(29)
+    assert isprime(2)
+    assert isprime(3)
+    assert not isprime(4)
+    assert isprime(5)
+    assert not isprime(12)
+    assert not isprime(25)
+    assert isprime(29)
     
