@@ -9,7 +9,7 @@ from class_2_tdd import isprime
 
 
 
-def validate_isprime():
+def test_isprime():
     assert isprime(2)
     assert isprime(3)
     assert not isprime(4)
