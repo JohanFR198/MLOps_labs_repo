@@ -1,3 +1,14 @@
+import sys
+import os
+
+# Add src directory to path using absolute path from this file's location
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
+
+
+from tdd import is_prime
+
+
+
 def validate_isprime():
     assert is_prime(2)
     assert is_prime(3)
