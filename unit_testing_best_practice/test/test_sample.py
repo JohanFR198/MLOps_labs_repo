@@ -8,42 +8,24 @@ from sample import *
 
 def test_answer():
     assert func(3) == 5
-    
-    
-def test_user_name():
-    """Test username, it must be
-    - Not Empty
-    - Contain no spaces
-    """
-    usr_nm = get_username()
-    assert usr_nm != ""
-    assert " " not in usr_nm
-    del usr_nm
-    
-    
-    
-    def test_password():
-        """Test password, it must be
-        - at least 8 characters
-        - at least one number
-        - at least one letter
-        - at least one special character
-        """
-        pwd_value = get_password()
-        assert len(pwd_value) >= 8
-        assert any(char.isdigit() for char in pwd_value) 
-        assert any(char.isalpha() for char in pwd_value)
-        assert any(not char.isalnum() for char in pwd_value)
-        del pwd_value
-        
-def test_email():
-    """Test email, it must be
-    - Contain @
-    - Contain .
-    - Not contain spaces
-    """
-    usr_email = get_email()
-    assert "@" in usr_email
-    assert "." in usr_email
-    assert " " not in usr_email
-    del usr_email
+
+
+
+def test_validate_username():
+    assert validate_username("john_doe")
+    assert not validate_username("")
+    assert not validate_username("john doe")
+
+
+def test_validate_password():
+    assert validate_password("Passw0rd!")
+    assert not validate_password("short1!")
+    assert not validate_password("password!")
+    assert not validate_password("Password1")
+    assert not validate_password("12345678!")
+
+
+def test_validate_email():
+    assert validate_email("test@example.com")
+    assert not validate_email("testexample.com")
+    assert not validate_email("test@examplecom")
