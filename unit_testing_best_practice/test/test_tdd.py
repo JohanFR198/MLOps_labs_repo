@@ -5,7 +5,7 @@ import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 
 
-from tdd import is_prime
+from class_2_tdd import is_prime
 
 
 
