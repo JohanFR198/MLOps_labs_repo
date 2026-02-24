@@ -54,6 +54,11 @@ def register_user():
 
     print("User registered successfully!")
 
+def calculate_area(radius: float) -> float:
+    if radius < 0:
+        return 0
+    import math
+    return math.pi * radius ** 2
 
 if __name__ == "__main__":
     register_user()

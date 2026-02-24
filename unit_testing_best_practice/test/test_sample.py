@@ -29,3 +29,9 @@ def test_validate_email():
     assert validate_email("test@example.com")
     assert not validate_email("testexample.com")
     assert not validate_email("test@examplecom")
+
+
+def test_calculate_area():
+    assert calculate_area(5) == 78.53981633974483
+    assert calculate_area(0) == 0
+    assert calculate_area(-1) == 0
