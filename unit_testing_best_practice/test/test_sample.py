@@ -35,3 +35,4 @@ def test_calculate_area():
     assert calculate_area(5) == 78.53981633974483
     assert calculate_area(0) == 0
     assert calculate_area(-1) == 0
+    assert calculate_area(2.5) == 19.634954084936208
